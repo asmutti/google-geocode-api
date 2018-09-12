@@ -3,7 +3,6 @@ package com.backbase.googlegeocode.googlegeocode.Route;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.model.dataformat.XmlJsonDataFormat;
 import org.springframework.beans.factory.annotation.Value;
 import org.apache.camel.component.http4.HttpMethods;
 import org.springframework.stereotype.Component;
