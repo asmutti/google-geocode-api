@@ -3,8 +3,6 @@ package com.backbase.googlegeocode.googlegeocode.controller;
 import org.apache.camel.*;
 import org.json.JSONObject;
 import org.json.XML;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,10 +31,6 @@ public class GoogleGeocodeController {
     @GetMapping("/geocode/{address}")
     @ResponseBody
     public String getGeoLocation(@PathVariable(name = "address") String address) {
-
-        if(address.isEmpty()) {
-            return "error";
-        }
 
         Map<String, Object> uriVariables = new HashMap<>();
         uriVariables.put("key", key);
